@@ -28,7 +28,31 @@ public class Test {
 						
 		System.out.println(maMap.getName());
 				
+		System.out.println(" **************************************************************.");		
+		System.out.println(" afficher les noms de toutes les rues (Street) d’une map donnee.");
+		System.out.println(" **************************************************************.");
 		
+		ToutesLesRues();
+		
+
+		System.out.println(" **************************************************************.");		
+		System.out.println(" Les rues pietonnes (Pedetrian) dont la longueur depasse 1000m.");
+		System.out.println(" **************************************************************.");
+		
+		ToutesRuesPietonnes1000();
+
+		System.out.println(" **************************************************************.");		
+		System.out.println(" Pour un nom de boulevard donne (Boulevard), trouver tous les noms des routes adjacentes..");
+		System.out.println(" **************************************************************.");
+		
+		
+		RoutesAdjacentes("");
+
+		System.out.println(" **************************************************************.");		
+		System.out.println(" Pour un nom de place (Square) donne, trouver tous les noms des routes la bordant..");
+		System.out.println(" **************************************************************.");
+		
+		RoutesBordantLaPlace("");
 	}
 	
 	
@@ -49,6 +73,35 @@ public class Test {
 		      e.printStackTrace();
 		   }
 		   return resource;
-		}
+	}
+	
+	/**
+	 * (1) First method
+	 */
+	public static void ToutesLesRues(){
+		
+	}
 
+	/**
+	 * (2) First method
+	 */
+	public static void ToutesRuesPietonnes1000(){
+		
+	}
+	
+
+	/**
+	 * (3) First method
+	 */
+	public static void RoutesAdjacentes(String boulevard){
+		
+	}
+	
+
+	/**
+	 * (4) First method
+	 */
+	public static void RoutesBordantLaPlace(String nom_place){
+		
+	}
 }

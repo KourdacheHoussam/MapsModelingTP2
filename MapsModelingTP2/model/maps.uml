@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+  <uml:Model xmi:id="_b5VhIHpfEeS3mKmuOCgw9A" name="maps" URI="http://maps/1.0">
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VhIXpfEeS3mKmuOCgw9A" name="map">
+      <ownedAttribute xmi:id="_b5VhInpfEeS3mKmuOCgw9A" name="name" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b5VhI3pfEeS3mKmuOCgw9A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5VhJHpfEeS3mKmuOCgw9A" name="roads" type="_b5VhKnpfEeS3mKmuOCgw9A" isOrdered="true" aggregation="composite" association="_b5VhPXpfEeS3mKmuOCgw9A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b5VhJXpfEeS3mKmuOCgw9A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b5VhJnpfEeS3mKmuOCgw9A" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5VhJ3pfEeS3mKmuOCgw9A" name="spaces" type="_b5VhNXpfEeS3mKmuOCgw9A" isOrdered="true" aggregation="composite" association="_b5VhP3pfEeS3mKmuOCgw9A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b5VhKHpfEeS3mKmuOCgw9A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b5VhKXpfEeS3mKmuOCgw9A" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VhKnpfEeS3mKmuOCgw9A" name="Road" isAbstract="true">
+      <ownedAttribute xmi:id="_b5VhK3pfEeS3mKmuOCgw9A" name="border" type="_b5VhNXpfEeS3mKmuOCgw9A" isOrdered="true" association="_b5VhOnpfEeS3mKmuOCgw9A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b5VhLHpfEeS3mKmuOCgw9A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b5VhLXpfEeS3mKmuOCgw9A" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5VhLnpfEeS3mKmuOCgw9A" name="name" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b5VhL3pfEeS3mKmuOCgw9A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5VhMHpfEeS3mKmuOCgw9A" name="length" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b5VhMXpfEeS3mKmuOCgw9A"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5VhMnpfEeS3mKmuOCgw9A" name="meet" type="_b5VhKnpfEeS3mKmuOCgw9A" isOrdered="true" association="_b5VhO3pfEeS3mKmuOCgw9A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b5VhM3pfEeS3mKmuOCgw9A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b5VhNHpfEeS3mKmuOCgw9A" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VhNXpfEeS3mKmuOCgw9A" name="PublicSpace" isAbstract="true">
+      <ownedAttribute xmi:id="_b5VhNnpfEeS3mKmuOCgw9A" name="borderedBy" type="_b5VhKnpfEeS3mKmuOCgw9A" isOrdered="true" association="_b5VhOnpfEeS3mKmuOCgw9A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b5VhN3pfEeS3mKmuOCgw9A" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b5VhOHpfEeS3mKmuOCgw9A" name="name" visibility="public" isOrdered="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b5VhOXpfEeS3mKmuOCgw9A"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_b5VhOnpfEeS3mKmuOCgw9A" memberEnd="_b5VhNnpfEeS3mKmuOCgw9A _b5VhK3pfEeS3mKmuOCgw9A"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_b5VhO3pfEeS3mKmuOCgw9A" memberEnd="_b5VhMnpfEeS3mKmuOCgw9A _b5VhPHpfEeS3mKmuOCgw9A">
+      <ownedEnd xmi:id="_b5VhPHpfEeS3mKmuOCgw9A" type="_b5VhKnpfEeS3mKmuOCgw9A" association="_b5VhO3pfEeS3mKmuOCgw9A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_b5VhPXpfEeS3mKmuOCgw9A" memberEnd="_b5VhJHpfEeS3mKmuOCgw9A _b5VhPnpfEeS3mKmuOCgw9A">
+      <ownedEnd xmi:id="_b5VhPnpfEeS3mKmuOCgw9A" type="_b5VhIXpfEeS3mKmuOCgw9A" association="_b5VhPXpfEeS3mKmuOCgw9A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_b5VhP3pfEeS3mKmuOCgw9A" memberEnd="_b5VhJ3pfEeS3mKmuOCgw9A _b5VhQHpfEeS3mKmuOCgw9A">
+      <ownedEnd xmi:id="_b5VhQHpfEeS3mKmuOCgw9A" type="_b5VhIXpfEeS3mKmuOCgw9A" association="_b5VhP3pfEeS3mKmuOCgw9A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VhQXpfEeS3mKmuOCgw9A" name="Street">
+      <generalization xmi:id="_b5VhQnpfEeS3mKmuOCgw9A" general="_b5VhKnpfEeS3mKmuOCgw9A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VhQ3pfEeS3mKmuOCgw9A" name="Boulevard">
+      <generalization xmi:id="_b5VhRHpfEeS3mKmuOCgw9A" general="_b5VhKnpfEeS3mKmuOCgw9A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VhRXpfEeS3mKmuOCgw9A" name="Pedestrian">
+      <generalization xmi:id="_b5VhRnpfEeS3mKmuOCgw9A" general="_b5VhKnpfEeS3mKmuOCgw9A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VhR3pfEeS3mKmuOCgw9A" name="Garden">
+      <generalization xmi:id="_b5VhSHpfEeS3mKmuOCgw9A" general="_b5VhNXpfEeS3mKmuOCgw9A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_b5VhSXpfEeS3mKmuOCgw9A" name="Square">
+      <generalization xmi:id="_b5VhSnpfEeS3mKmuOCgw9A" general="_b5VhNXpfEeS3mKmuOCgw9A"/>
+    </packagedElement>
+    <profileApplication xmi:id="_b5VhS3pfEeS3mKmuOCgw9A">
+      <eAnnotations xmi:id="_b5VhTHpfEeS3mKmuOCgw9A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Ecore:EPackage xmi:id="_b5VhTXpfEeS3mKmuOCgw9A" base_Package="_b5VhIHpfEeS3mKmuOCgw9A" nsPrefix="maps"/>
+  <Ecore:EClass xmi:id="_b5VhTnpfEeS3mKmuOCgw9A" base_Class="_b5VhIXpfEeS3mKmuOCgw9A"/>
+  <Ecore:EReference xmi:id="_b5VhT3pfEeS3mKmuOCgw9A" base_Property="_b5VhJHpfEeS3mKmuOCgw9A"/>
+  <Ecore:EReference xmi:id="_b5VhUHpfEeS3mKmuOCgw9A" base_Property="_b5VhJ3pfEeS3mKmuOCgw9A"/>
+  <Ecore:EClass xmi:id="_b5VhUXpfEeS3mKmuOCgw9A" base_Class="_b5VhKnpfEeS3mKmuOCgw9A"/>
+  <Ecore:EReference xmi:id="_b5VhUnpfEeS3mKmuOCgw9A" base_Property="_b5VhK3pfEeS3mKmuOCgw9A"/>
+  <Ecore:EReference xmi:id="_b5VhU3pfEeS3mKmuOCgw9A" base_Property="_b5VhMnpfEeS3mKmuOCgw9A"/>
+  <Ecore:EClass xmi:id="_b5VhVHpfEeS3mKmuOCgw9A" base_Class="_b5VhNXpfEeS3mKmuOCgw9A"/>
+  <Ecore:EReference xmi:id="_b5VhVXpfEeS3mKmuOCgw9A" base_Property="_b5VhNnpfEeS3mKmuOCgw9A"/>
+  <Ecore:EClass xmi:id="_b5VhVnpfEeS3mKmuOCgw9A" base_Class="_b5VhQXpfEeS3mKmuOCgw9A"/>
+  <Ecore:EClass xmi:id="_b5VhV3pfEeS3mKmuOCgw9A" base_Class="_b5VhQ3pfEeS3mKmuOCgw9A"/>
+  <Ecore:EClass xmi:id="_b5VhWHpfEeS3mKmuOCgw9A" base_Class="_b5VhRXpfEeS3mKmuOCgw9A"/>
+  <Ecore:EClass xmi:id="_b5VhWXpfEeS3mKmuOCgw9A" base_Class="_b5VhR3pfEeS3mKmuOCgw9A"/>
+  <Ecore:EClass xmi:id="_b5VhWnpfEeS3mKmuOCgw9A" base_Class="_b5VhSXpfEeS3mKmuOCgw9A"/>
+</xmi:XMI>

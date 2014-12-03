@@ -38,4 +38,10 @@ Utiliser la methode charger Modele contenue dans test.java pour ecrire les metho
 — Recuperer toutes les rues pietonnes (Pedetrian) dont la longueur depasse 1000m.
 — Pour un nom de boulevard donne (Boulevard), trouver tous les noms des routes adjacentes.
 — Pour un nom de place (Square) donne, trouver tous les noms des routes la bordant.
+
 Astuce Générer le ECore Diagram du méta-modèele pour mieux voir les classes et références.
+- Pour Générer le diagram UML depuis le maps.ecore: 
+	clique droit sur maps.ecore > initialize ecore diagram
+	
+
+
