@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import maps.MapsPackage;
+import maps.Pedestrian;
+import maps.Road;
 import maps.map;
 
 import org.eclipse.emf.common.util.*;
@@ -32,27 +34,27 @@ public class Test {
 		System.out.println(" afficher les noms de toutes les rues (Street) d’une map donnee.");
 		System.out.println(" **************************************************************.");
 		
-		ToutesLesRues();
+		ToutesLesRues( maMap);
 		
 
 		System.out.println(" **************************************************************.");		
 		System.out.println(" Les rues pietonnes (Pedetrian) dont la longueur depasse 1000m.");
 		System.out.println(" **************************************************************.");
 		
-		ToutesRuesPietonnes1000();
+		ToutesRuesPietonnes1000(maMap);
 
 		System.out.println(" **************************************************************.");		
 		System.out.println(" Pour un nom de boulevard donne (Boulevard), trouver tous les noms des routes adjacentes..");
 		System.out.println(" **************************************************************.");
 		
 		
-		RoutesAdjacentes("");
+		RoutesAdjacentes(maMap, "");
 
 		System.out.println(" **************************************************************.");		
 		System.out.println(" Pour un nom de place (Square) donne, trouver tous les noms des routes la bordant..");
 		System.out.println(" **************************************************************.");
 		
-		RoutesBordantLaPlace("");
+		RoutesBordantLaPlace(maMap, "");
 	}
 	
 	
@@ -78,30 +80,41 @@ public class Test {
 	/**
 	 * (1) First method
 	 */
-	public static void ToutesLesRues(){
-		
+	public static void ToutesLesRues(map map){
+		EList<Road> roads=map.getRoads();
+		for(int i=0;i<roads.size(); i++){
+			System.out.println("Route : "+roads.get(i).getName());
+		}
 	}
 
 	/**
-	 * (2) First method
+	 * (2) second method
 	 */
-	public static void ToutesRuesPietonnes1000(){
+	public static void ToutesRuesPietonnes1000(map map){
+		EList<Road> roads=map.getRoads();
+		for (int i = 0; i < roads.size(); i++) {
+			if(roads.get(i) != null && roads.get(i)  instanceof Pedestrian) {
+				Pedestrian new_pedestrian = (Pedestrian) roads.get(i);
+				if(new_pedestrian.getLength()>1000){
+					System.out.println("R.piétone : "+new_pedestrian.getName());
+				}
+			}
+		}
+	}
+	
+
+	/**
+	 * (3) third method
+	 */
+	public static void RoutesAdjacentes(map map, String boulevard){
 		
 	}
 	
 
 	/**
-	 * (3) First method
+	 * (4) fourth method
 	 */
-	public static void RoutesAdjacentes(String boulevard){
-		
-	}
-	
-
-	/**
-	 * (4) First method
-	 */
-	public static void RoutesBordantLaPlace(String nom_place){
+	public static void RoutesBordantLaPlace(map map, String nom_place){
 		
 	}
 }
