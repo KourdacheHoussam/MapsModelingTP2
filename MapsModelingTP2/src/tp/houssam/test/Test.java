@@ -4,9 +4,12 @@ import java.util.EmptyStackException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
+
 import maps.Boulevard;
 import maps.MapsPackage;
 import maps.Pedestrian;
+import maps.PublicSpace;
 import maps.Road;
 import maps.map;
 
@@ -34,41 +37,29 @@ public class Test {
 
 		System.out.println(maMap.getName());
 
-		System.out
-				.println(" **************************************************************.");
-		System.out
-				.println(" afficher les noms de toutes les rues (Street) d’une map donnee.");
-		System.out
-				.println(" **************************************************************.");
+		System.out.println(" **************************************************************");
+		System.out.println(" afficher les noms de toutes les rues (Street) d’une map donnee");
+		System.out.println(" **************************************************************");
 
 		ToutesLesRues(maMap);
 
-		System.out
-				.println(" **************************************************************.");
-		System.out
-				.println(" Les rues pietonnes (Pedetrian) dont la longueur depasse 1000m.");
-		System.out
-				.println(" **************************************************************.");
+		System.out.println(" **************************************************************");
+		System.out.println(" Les rues pietonnes (Pedetrian) dont la longueur depasse 1000m");
+		System.out.println(" **************************************************************");
 
 		ToutesRuesPietonnes1000(maMap);
 
-		System.out
-				.println(" **************************************************************.");
-		System.out
-				.println(" Pour un nom de boulevard donne (Boulevard), trouver tous les noms des routes adjacentes..");
-		System.out
-				.println(" **************************************************************.");
+		System.out.println(" **************************************************************");
+		System.out.println(" Pour un nom de boulevard donne (Boulevard), trouver tous les noms des routes adjacentes..");
+		System.out.println(" **************************************************************");
 
 		RoutesAdjacentes(maMap, "Victor Hugo");
 
-		System.out
-				.println(" **************************************************************.");
-		System.out
-				.println(" Pour un nom de place (Square) donne, trouver tous les noms des routes la bordant..");
-		System.out
-				.println(" **************************************************************.");
+		System.out.println(" **************************************************************");
+		System.out.println(" Pour un nom de place (Square) donne, trouver tous les noms des routes la bordant..");
+		System.out.println(" **************************************************************");
 
-		RoutesBordantLaPlace(maMap, "");
+		RoutesBordantLaPlace(maMap, "Comedie");
 	}
 
 	public static Resource chargerModele(String uri, EPackage pack) {
@@ -137,6 +128,16 @@ public class Test {
 	 * (4) fourth method
 	 */
 	public static void RoutesBordantLaPlace(map map, String nom_place) {
-
+		EList<PublicSpace>spaces=map.getSpaces();
+		for (int i = 0; i < spaces.size(); i++) {
+			PublicSpace current_space=spaces.get(i);
+			if(current_space.getName().equalsIgnoreCase(nom_place)){
+				EList<Road>roadsborded=current_space.getBorderedBy();
+				System.out.println("-- -- Routes abordant ce square :    :)");
+				for (int j = 0; j < roadsborded.size(); j++) {
+						System.out.println(roadsborded.get(j).getName());
+				}
+			}
+		}
 	}
 }
